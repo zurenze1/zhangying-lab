@@ -13,3 +13,7 @@ html.qi-reveal .hero-image img{animation:qiHero 1.6s ease both}
 /* 30 秒看懂：允许换行，不出框 */
 .hero .hero-brief{white-space:normal;width:auto;max-width:min(100%,640px);align-items:baseline}
 .hero .hero-brief span{min-width:0;text-wrap:pretty}
+/* V19：30 秒看懂固定两行，长度相近 */
+.hero .hero-brief{max-width:none;width:fit-content;align-items:center}
+.hero .hero-brief .brief-lines{display:flex;flex-direction:column;gap:2px}
+.hero .hero-brief .brief-lines span{white-space:nowrap}
