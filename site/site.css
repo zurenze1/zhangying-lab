@@ -205,3 +205,27 @@ dialog::backdrop{background:#030406c9}
   .bridge-inner{align-items:flex-start;flex-direction:column}
   .site-footer button.text-link,.site-footer a{font-size:13px}
 }
+
+/* V14 首屏左侧重排：90° 缩小后补足层次 */
+.hero-copy{min-height:calc(100svh - var(--header));display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-block:40px 70px}
+.hero-eyebrow{margin:0 0 18px;font-size:clamp(12px,.95vw,15px);letter-spacing:.22em;color:#cdb88f}
+.hero-eyebrow::before{content:"";display:inline-block;width:34px;height:1px;margin-right:14px;vertical-align:middle;background:linear-gradient(90deg,#f5c77e,transparent)}
+.hero-temp-row{display:flex;align-items:center;gap:clamp(16px,1.6vw,26px)}
+.hero-temp-note{display:flex;flex-direction:column;gap:6px;margin:0;padding-left:clamp(16px,1.6vw,26px);border-left:1px solid #f3c07c55;font-size:clamp(12px,.95vw,15px);color:#bdb4a6;line-height:1.3}
+.hero-temp-note span:first-child{color:#f3d6a2;font-weight:650;letter-spacing:.12em}
+.hero h1{margin-top:clamp(14px,1.6vw,26px)}
+.hero-steps{list-style:none;display:flex;gap:0;margin:30px 0 0;padding:0;width:min(480px,40vw)}
+.hero-steps li{white-space:nowrap}
+.hero-steps li{position:relative;flex:1;padding-top:18px}
+.hero-steps li::before{content:"";position:absolute;left:0;right:0;top:4px;height:1px;background:linear-gradient(90deg,#f3c07caa,#f3c07c33)}
+.hero-steps li::after{content:"";position:absolute;left:0;top:0;width:9px;height:9px;border-radius:50%;background:#f5c77e;box-shadow:0 0 12px #f5a64a}
+.hero-steps b{display:block;font-size:clamp(15px,1.25vw,20px);color:#f6e7cc;font-weight:700}
+.hero-steps span{display:block;margin-top:2px;font-size:12px;color:#a59c8f;letter-spacing:.08em}
+@media (max-width:640px){
+  .hero-copy{min-height:0;display:block;padding-block:clamp(340px,109vw,640px) 52px}
+  .hero-eyebrow{font-size:11px;letter-spacing:.14em;margin-bottom:10px}
+  .hero-eyebrow::before{width:20px;margin-right:8px}
+  .hero-temp-note{font-size:11px}
+  .hero-steps{width:100%;margin-top:18px}
+  .hero-steps b{font-size:14px}
+}
