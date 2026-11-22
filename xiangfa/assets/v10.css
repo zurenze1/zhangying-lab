@@ -1,0 +1,120 @@
+/* Poster during review. The opener stays independent of the content and soundtrack. */
+.entry-v10 {
+  pointer-events: auto;
+  z-index: 30;
+  overflow: hidden;
+  background: #08090c;
+}
+.entry-v10::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,#070709f2,transparent 45%);
+  pointer-events: none;
+}
+.opening-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 46% 50%; }
+.entry-start {
+  position: absolute;
+  z-index: 1;
+  bottom: max(8vh,46px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: 48px;
+  padding: 10px 22px;
+  color: #19130d;
+  background: #e6c08a;
+  border: 1px solid #f4d5a9;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 680;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.entry-start span { margin-inline-start: .45em; }
+.entry-start:hover { background: #efd4aa; }
+.entry-v10 #skip-opening { z-index: 2; }
+.site-header .replay-control {
+  position: relative;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-left: -9px;
+  padding: 9px;
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.site-header .replay-control[hidden] { display: none; }
+.replay-control svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; }
+.replay-control:hover, .replay-control:focus-visible { background: #b38f5b19; border-color: #a785586e; }
+.replay-hint {
+  pointer-events: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  background: #171316;
+  color: #f0d5ae;
+  border: 1px solid #b18e60;
+  border-radius: 5px;
+  padding: 5px 8px;
+  white-space: nowrap;
+  opacity: 0;
+}
+.replay-control:hover .replay-hint, .replay-control:focus-visible .replay-hint { opacity: 1; }
+
+.heading-phrase { display: inline-block; white-space: nowrap; }
+.hero h1 { font-size: clamp(47px,4.65vw,82px); }
+.hero h1 .title-mask:last-child { color: #f4f1ed; }
+.hero h1 .heading-phrase:last-child { color: #e3cda9; }
+#plan h2 { font-size: clamp(45px,4.35vw,79px); }
+#review-title { font-size: clamp(40px,3.92vw,67px); }
+#pace .pace-heading h2 { font-size: clamp(30px,3.17vw,52px); }
+#appendix-title { font-size: clamp(46px,5.6vw,90px); }
+
+.storyboard-link {
+  align-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  min-height: 44px;
+  width: fit-content;
+  margin-top: 9px;
+  padding: 7px 13px;
+  background: #6c503124;
+  border: 1px solid #bc996b75;
+  border-radius: 8px;
+  color: #f3d6af;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 640;
+  cursor: pointer;
+}
+.storyboard-link::after { content: "↗"; font-size: .9em; }
+.storyboard-link:hover { background: #6c50315c; }
+.premium-copy .product-price-check { display: flex; gap: 4px 10px; flex-wrap: wrap; align-items: baseline; }
+.product-price-check strong { color: #f2d3a1; }
+.product-price-check span { color: #bcb0a7; font-size: 12px; }
+
+@media (min-width: 761px) {
+  main > section :is(h1,h2)[id] .title-mask > span { white-space: nowrap; }
+}
+@media (max-width: 760px) {
+  .site-header .nav { column-gap: 8px; }
+  .site-header .site-jump { font-size: 12px; }
+  .site-header .replay-control { margin-left: -10px; }
+  .hero h1 { font-size: clamp(37px,10.6vw,58px); }
+  #plan h2 { font-size: clamp(28px,8.95vw,52px); }
+  #review-title { font-size: clamp(21px,7vw,50px); }
+  #appendix-title { font-size: clamp(29px,8vw,47px); }
+  #pace .pace-heading h2 { font-size: clamp(27px,7vw,43px); }
+  .entry-start { bottom: max(12vh,89px); }
+}
+@media (max-width: 375px) {
+  .site-header .brand { font-size: 12px; }
+  .site-header .nav { column-gap: 5px; }
+}

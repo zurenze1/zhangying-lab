@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>护肤与财经审稿｜合规知识库 V2</title>
+<style>
+  :root { color-scheme: dark; --bg:#101014; --surface:#19171a; --ink:#f2ece4; --dim:#d4c8b7; --gold:#f0ca8e; --rule:#7b5c406b; }
+  * { box-sizing:border-box; }
+  body { margin:0; font: 16px/1.65 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:var(--bg); }
+  .shell { width:min(1120px,calc(100% - 48px)); margin-inline:auto; }
+  header { background:radial-gradient(ellipse at 23% 45%,#54392688,transparent 64%),#101014; border-bottom:1px solid var(--rule); }
+  nav { display:flex; justify-content:space-between; gap:12px; padding-block:15px; border-bottom:1px solid var(--rule); }
+  nav a { display:flex; align-items:center; min-height:44px; }
+  a { color:var(--gold); text-underline-offset:4px; }
+  a:hover { color:#fff0d7; }
+  header .intro { padding-block: clamp(34px,7vw,91px); }
+  .chapter-links { display:flex; gap:9px; flex-wrap:wrap; margin-top:17px; }
+  .chapter-links a { display:inline-flex; align-items:center; min-height:44px; padding:5px 12px; border:1px solid var(--rule); border-radius:8px; background:#2b211b; text-decoration:none; }
+  .finance-brief { padding:18px; margin-bottom:14px; background:linear-gradient(120deg,#2b2526,#19171b); border:1px solid var(--rule); border-radius:13px; color:var(--dim); }
+  .finance-brief p + p { margin-top:6px; }
+  .finance-brief strong { color:var(--gold); }
+  .finance-sources { margin-top:18px; }
+  .finance-sources h3 { margin-bottom:6px; }
+  .finance-sources > p { margin-top:8px; color:var(--dim); font-size:14px; }
+  .eyebrow { color:var(--gold); font-size:13px; letter-spacing:.12em; }
+  h1,h2,h3,p { margin:0; }
+  h1 { font-size:clamp(37px,7vw,91px); line-height:1.08; letter-spacing:-.055em; text-wrap:balance; }
+  h1 span { display:block; color:var(--gold); }
+  header p { margin-top:18px; max-width:49em; color:var(--dim); }
+  main { padding-top:6px; }
+  section { margin-block:clamp(30px,6vw,82px); }
+  section[id], .sources li { scroll-margin-top:20px; }
+  h2 { font-size:clamp(25px,4vw,47px); line-height:1.2; letter-spacing:-.04em; margin-bottom:16px; }
+  h3 { font-size:20px; line-height:1.3; }
+  .bounds { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+  .bound,.pair { border:1px solid var(--rule); border-radius:13px; background:var(--surface); padding:17px; }
+  .bound small { color:var(--gold); }
+  .bound h3 { margin:6px 0 8px; }
+  .bound p,.check,.sources p { font-size:14px; color:var(--dim); }
+  .refs { display:flex; flex-wrap:wrap; gap:5px 9px; margin-top:12px; font-size:11px; line-height:1.45; }
+  .refs a { overflow-wrap:anywhere; }
+  .pairs { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); list-style:none; padding:0; margin:0; gap:10px; }
+  .pair { display:grid; align-content:start; }
+  .words { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:12px 0; }
+  .words div { padding:10px; border-radius:7px; background:#412b2a; }
+  .words div + div { background:#333025; }
+  .words span { display:block; font-size:12px; color:#ffc1b5; }
+  .words div + div span { color:#f3cf98; }
+  .words p { margin-top:3px; font-size:15px; }
+  ol.checklist { padding-left:1.2em; color:var(--dim); }
+  ol.checklist li + li { margin-top:6px; }
+  .sources { list-style:none; margin:0; padding:0; }
+  .sources li { padding:10px 12px; border-bottom:1px solid var(--rule); }
+  .sources li:target { background:#3a2c20; border-radius:5px; }
+  footer { padding:18px 0 36px; color:var(--dim); border-top:1px solid var(--rule); font-size:14px; }
+  @media(max-width:1000px) { .bounds { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media(max-width:720px) { .shell { width:calc(100% - 32px); } .pairs { grid-template-columns:minmax(0,1fr); } }
+  @media(max-width:570px) { .bounds { grid-template-columns:minmax(0,1fr); } .bound,.pair { padding:13px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="shell">
+    <nav aria-label="附件导航"><a href="../../版本/V11/index.html#review">← 返回提案</a><a href="合规知识库_V2.md">Markdown 版 ↓</a></nav>
+    <div class="intro">
+      <div class="eyebrow">合规知识库 V2</div>
+      <h1>护肤与财经怎么审</h1>
+      <p>编导审稿参考。护肤稿看成品证据，财经稿看公开来源和表达边界。</p>
+      <div class="chapter-links"><a href="#cosmetics">护肤功效</a><a href="#finance">财经表达</a></div>
+    </div>
+  </div>
+</header>
+<main class="shell">
+  <section id="cosmetics" aria-labelledby="bound-title">
+    <h2 id="bound-title">化妆品功效宣称</h2>
+    <div class="bounds"><article class="bound"><small>下架宣称</small><h3>医疗暗示</h3><p>普通化妆品文案出现治疗疾病、消炎消肿等医疗功效，删除产品宣称。画面、标题、字幕与口播一起审。</p><div class="refs"><a href="#source-1">《化妆品监督管理条例》第 37、43 条</a> <a href="#source-3">《化妆品标签管理办法》第 19 条第（一）（三）项</a> <a href="#source-4">《【美妆】行业管理规范》7.2.3（4）</a></div></article>
+<article class="bound"><small>核成品评价</small><h3>抗皱、紧致</h3><p>按注册或备案口径及适用的功效评价试验逐项核对。文献可以补充解释，单独拿文献无法替代要求的试验。</p><div class="refs"><a href="#source-1">《化妆品监督管理条例》第 22 条</a> <a href="#source-2">《化妆品功效宣称评价规范》第 9 条及附 1</a> <a href="#source-3">《化妆品标签管理办法》第 5 条</a></div></article>
+<article class="bound"><small>分开核证</small><h3>修护、敏感肌</h3><p>修护对应人体功效评价试验。宣称适用敏感皮肤，应有人体功效评价试验或消费者使用测试。涉及温和、无刺激，另按相应宣称核证。</p><div class="refs"><a href="#source-2">《化妆品功效宣称评价规范》第 9–11 条</a> <a href="#source-3">《化妆品标签管理办法》第 19 条第（二）（十）项</a></div></article>
+<article class="bound"><small>核对象和口径</small><h3>成分、作用层次</h3><p>原料结构、原料试验与成品功效分开讲。声称某成分能到达某层或产生效果时，证据需对应产品、方法与宣称。</p><div class="refs"><a href="#source-1">《化妆品监督管理条例》第 22 条</a> <a href="#source-2">《化妆品功效宣称评价规范》第 11、17–19 条</a> <a href="#source-3">《化妆品标签管理办法》第 19 条第（四）（六）（七）项</a></div></article></div>
+  </section>
+  <section aria-labelledby="pair-title">
+    <h2 id="pair-title">十组高风险表达改写</h2>
+    <ol class="pairs"><li class="pair">
+      <h3>医疗暗示</h3>
+      <div class="words">
+        <div><span>高风险</span><p>这瓶面霜能治疗皮炎。</p></div>
+        <div><span>安全写法</span><p>今天聊普通保湿护理怎么选。皮肤不适持续时，建议就医。</p></div>
+      </div>
+      <p class="check">删掉疾病与商品之间的治疗关系。</p>
+      <div class="refs"><a href="#source-1">《化妆品监督管理条例》第 37、43 条</a> <a href="#source-3">《化妆品标签管理办法》第 19 条第（一）项</a> <a href="#source-4">《【美妆】行业管理规范》7.2.3（4）</a></div>
+    </li>
+<li class="pair">
+      <h3>医疗暗示</h3>
+      <div class="words">
+        <div><span>高风险</span><p>涂上就消炎、消肿。</p></div>
+        <div><span>安全写法</span><p>换季皮肤容易感到紧绷，选日常护理时可以先看保湿产品的使用说明。</p></div>
+      </div>
+      <p class="check">改讲普通护理。若具体产品要讲舒缓，另核该成品的评价依据。</p>
+      <div class="refs"><a href="#source-1">《化妆品监督管理条例》第 43 条</a> <a href="#source-2">《化妆品功效宣称评价规范》第 8、9 条</a> <a href="#source-4">《【美妆】行业管理规范》7.2.3（4）</a></div>
+    </li>
+<li class="pair">
+      <h3>修护边界</h3>
+      <div class="words">
+        <div><span>高风险</span><p>用它治好受损屏障。</p></div>
+        <div><span>安全写法</span><p>聊屏障时，我们先讲角质层在日常护理中的作用。</p></div>
+      </div>
+      <p class="check">“修护”有评价规范。成品要宣称修护，按注册或备案口径和人体功效评价试验审核。</p>
+      <div class="refs"><a href="#source-1">《化妆品监督管理条例》第 22、43 条</a> <a href="#source-2">《化妆品功效宣称评价规范》第 10 条</a> <a href="#source-3">《化妆品标签管理办法》第 5 条、第 19 条第（一）项</a></div>
+    </li>
+<li class="pair">
+      <h3>作用层次</h3>
+      <div class="words">
+        <div><span>高风险</span><p>胶原被皮肤吸收，直达真皮。</p></div>
+        <div><span>安全写法</span><p>这里讲的是原料的蛋白结构。看成品时，要单独问它测了什么、怎么测。</p></div>
+      </div>
+      <p class="check">保留有来源的原料科普。未取得对应证据时，删去吸收、到达和作用的断言。</p>
+      <div class="refs"><a href="#source-1">《化妆品监督管理条例》第 22、43 条</a> <a href="#source-2">《化妆品功效宣称评价规范》第 11、17–19 条</a> <a href="#source-3">《化妆品标签管理办法》第 19 条第（四）（七）项</a></div>
+    </li>
+<li class="pair">
+      <h3>抗衰边界</h3>
+      <div class="words">
+        <div><span>高风险</span><p>这一瓶能逆龄十年。</p></div>
+        <div><span>安全写法</span><p>聊皮肤老化，先把皱纹和紧致度这两类指标说清楚。</p></div>
+      </div>
+      <p class="check">谈成品时拆成注册或备案口径中的具体功效，例如抗皱或紧致，再核对应试验。</p>
+      <div class="refs"><a href="#source-1">《化妆品监督管理条例》第 22、43 条</a> <a href="#source-2">《化妆品功效宣称评价规范》第 9 条及附 1</a> <a href="#source-3">《化妆品标签管理办法》第 19 条第（二）（十）项</a></div>
+    </li>
+<li class="pair">
+      <h3>量化效果</h3>
+      <div class="words">
+        <div><span>高风险</span><p>七天皱纹减少 30%。</p></div>
+        <div><span>安全写法</span><p>看抗皱报告，先看测量指标、测试周期和参加测试的人。</p></div>
+      </div>
+      <p class="check">没有同一成品、期限、人群和指标的试验依据时，去掉数字与时限。</p>
+      <div class="refs"><a href="#source-1">《化妆品监督管理条例》第 22、43 条</a> <a href="#source-2">《化妆品功效宣称评价规范》第 9、17–19 条</a> <a href="#source-3">《化妆品标签管理办法》第 19 条第（六）项</a></div>
+    </li>
+<li class="pair">
+      <h3>即时承诺</h3>
+      <div class="words">
+        <div><span>高风险</span><p>一抹立刻提拉紧致。</p></div>
+        <div><span>安全写法</span><p>这一段只展示膏体推开时的质地。</p></div>
+      </div>
+      <p class="check">用真实近景呈现质地，画面也不要暗示即时功效。要讲即时紧致，核同一成品及对应测试条件。</p>
+      <div class="refs"><a href="#source-2">《化妆品功效宣称评价规范》第 9、17–19 条</a> <a href="#source-3">《化妆品标签管理办法》第 19 条第（二）（十）项</a> <a href="#source-4">《【美妆】行业管理规范》7.2.3（2）–（3）</a></div>
+    </li>
+<li class="pair">
+      <h3>适用人群</h3>
+      <div class="words">
+        <div><span>高风险</span><p>所有敏感肌都能用，保证零刺激。</p></div>
+        <div><span>安全写法</span><p>选护肤品时，先看标签上的适用信息和使用提示。</p></div>
+      </div>
+      <p class="check">敏感皮肤适用和温和分别审证，删除覆盖所有人和安全保证。</p>
+      <div class="refs"><a href="#source-2">《化妆品功效宣称评价规范》第 9、11 条</a> <a href="#source-3">《化妆品标签管理办法》第 19 条第（二）（十）项</a> <a href="#source-4">《【美妆】行业管理规范》7.2.3（2）–（3）</a></div>
+    </li>
+<li class="pair">
+      <h3>原料外推</h3>
+      <div class="words">
+        <div><span>高风险</span><p>原料实验有效，所以这款面霜效果也一样。</p></div>
+        <div><span>安全写法</span><p>先把报告测的是原料还是面霜分清，再说结论能用在哪儿。</p></div>
+      </div>
+      <p class="check">原料宣称需说明与产品宣称的关联。成品结论仍须满足所宣称功效的评价要求。</p>
+      <div class="refs"><a href="#source-1">《化妆品监督管理条例》第 22 条</a> <a href="#source-2">《化妆品功效宣称评价规范》第 11、17–19 条</a> <a href="#source-3">《化妆品标签管理办法》第 19 条第（六）（七）项</a></div>
+    </li>
+<li class="pair">
+      <h3>产品类别</h3>
+      <div class="words">
+        <div><span>高风险</span><p>普通面霜也能医学美白、淡化斑。</p></div>
+        <div><span>安全写法</span><p>选祛斑美白类化妆品时，先核对产品的注册信息。</p></div>
+      </div>
+      <p class="check">祛斑美白属特殊化妆品，对应人体功效评价试验。删除医疗暗示及普通产品的同类宣称。</p>
+      <div class="refs"><a href="#source-1">《化妆品监督管理条例》第 16、43 条</a> <a href="#source-2">《化妆品功效宣称评价规范》第 10 条</a> <a href="#source-4">《【美妆】行业管理规范》7.2.3（1）（4）</a></div>
+    </li></ol>
+  </section>
+  <section aria-labelledby="check-title">
+    <h2 id="check-title">审稿回填</h2>
+    <ol class="checklist"><li>逐句提取功效、机制、数字、适用人群、时间，以及画面暗示。为每句标「退回修改」「需补证」或「保留」。</li><li>「需补证」核同一产品的注册或备案、标签、摘要及对应报告。记录报告页码、试验对象、指标、期限和适用范围。没有材料就提出中性的科普改写。</li><li>编导逐句对照脚本、字幕、封面与展示画面，复核结论和出处，再把改稿交给张博。法务确认重要文案。</li></ol>
+  </section>
+  <section aria-labelledby="source-title">
+    <h2 id="source-title">原文和条款</h2>
+    <ul class="sources"><li id="source-1"><a href="https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_9f8b70e79a2242df96c6c290a0ac425b.html" target="_blank" rel="noreferrer">《化妆品监督管理条例》 <span aria-hidden="true">↗</span></a><p>国务院令第 727 号 · 第 16、22、37、43 条</p></li>
+<li id="source-2"><a href="https://yjj.scjgj.fujian.gov.cn/hzp/flfg/202107/t20210708_5642667.htm" target="_blank" rel="noreferrer">《化妆品功效宣称评价规范》 <span aria-hidden="true">↗</span></a><p>国家药监局 2021 年第 50 号 · 第 4、6、8–12、17–19 条及附 1</p></li>
+<li id="source-3"><a href="https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202204/t20220408_2669523.html" target="_blank" rel="noreferrer">《化妆品标签管理办法》 <span aria-hidden="true">↗</span></a><p>国家药监局 2021 年第 77 号 · 第 5 条、第 19 条第（一）（二）（四）（六）（七）（十）项</p></li>
+<li id="source-4"><a href="https://school.jinritemai.com/doudian/web/articlev0/106242?biz_from=rule_center_entry_new" target="_blank" rel="noreferrer">《【美妆】行业管理规范》 <span aria-hidden="true">↗</span></a><p>官方电商规则 · 7.2.2、7.2.3（1）–（4）</p></li>
+<li id="source-5"><a href="https://my.feishu.cn/wiki/YiwSwEHFWixtf6kf1xUcHp95nmd" target="_blank" rel="noreferrer">原工作手册（2026-11-02 核验） <span aria-hidden="true">↗</span></a><p>祖仁泽 · 表达风险分层与审稿方法 · 按原权限访问</p></li></ul>
+  </section>
+
+  <section id="finance" aria-labelledby="finance-title">
+    <h2 id="finance-title">财经表达</h2>
+    <div class="finance-brief">
+      <p>从公开的行业数据、政策原文、交易所公告、公司定期报告说起。先给事实和出处，再解释张博怎么看。</p>
+      <p>团队稿件不做具体股票或基金的买卖建议、收益或股价预测、回报承诺、内幕传闻和缺少公开出处的上市公司判断。</p>
+      <p><strong>个人观点，不构成投资建议。</strong></p>
+    </div>
+    <ol class="pairs finance-pairs">
+      <li class="pair">
+      <h3>具体股票或基金买卖</h3>
+      <div class="words"><div><span>高风险</span><p>这只生物科技股今天就可以买，想稳一点就买我说的那只基金。</p></div><div><span>安全写法</span><p>看生物制造，可以从公开资料里找三样东西：产能能不能放大、单位成本怎么变、有没有稳定客户。</p></div></div>
+      <p class="check">删去证券或基金代码、买卖动作、仓位和价格。按行业找公开资料，保留判断依据。</p><div class="refs"><a href="#finance-law">《中华人民共和国证券法》 · 第 160 条</a> <a href="#finance-consult">《证券、期货投资咨询管理暂行办法》 · 第 2、3 条</a> <a href="#finance-platform">平台《社区自律公约》 · 分则 33、36（2）</a></div>
+    </li> <li class="pair">
+      <h3>预测收益或涨幅</h3>
+      <div class="words"><div><span>高风险</span><p>这只股票下个月能涨三成，现在的价格还有一大段空间。</p></div><div><span>安全写法</span><p>这条我只谈技术落地。方案能不能走到量产，要看公开披露的中试进度和成本数据。</p></div></div>
+      <p class="check">删去涨幅、目标价、期限及收益图。技术进度和估价分开。</p><div class="refs"><a href="#finance-consult">《证券、期货投资咨询管理暂行办法》 · 第 2、3 条</a> <a href="#finance-regulator">国家网信办与中国证监会联合整治通报 · 跟风买入案例</a></div>
+    </li> <li class="pair">
+      <h3>暗示固定回报</h3>
+      <div class="words"><div><span>高风险</span><p>这个赛道买了放着就赚，别担心亏，不涨我来兜底。</p></div><div><span>安全写法</span><p>政策支持可能改变行业的扩产节奏。项目能不能做成，还得看技术成熟度、成本和订单。</p></div></div>
+      <p class="check">删去“稳赚”“必涨”、兜底、回本承诺及用收益截图带单。</p><div class="refs"><a href="#finance-consult">《证券、期货投资咨询管理暂行办法》 · 第 24 条第（二）（三）项</a> <a href="#finance-platform">平台《社区自律公约》 · 分则 33、35（1）</a></div>
+    </li> <li class="pair">
+      <h3>拿“内部消息”做内容</h3>
+      <div class="words"><div><span>高风险</span><p>内部已经定了，下周有并购公告，先关注这只股票。</p></div><div><span>安全写法</span><p>并购这件事只以交易所和公司的公开公告为准。今天谈公开规则里投资人通常会看哪些环节。</p></div></div>
+      <p class="check">删除未经披露的传闻、暗示和交易引导。可能涉及内幕信息时，整段先撤下并交法务复核。</p><div class="refs"><a href="#finance-law">《中华人民共和国证券法》 · 第 52、53、56、80 条</a> <a href="#finance-platform">平台《社区自律公约》 · 分则 21</a></div>
+    </li> <li class="pair">
+      <h3>给上市公司下无出处的判断</h3>
+      <div class="words"><div><span>高风险</span><p>这家上市公司拿到了未公告的大订单，我判断营收肯定翻倍。</p></div><div><span>安全写法</span><p>这期只用已发布的财报和公告看收入来自哪里。没有公开的订单和经营数据，先留空。</p></div></div>
+      <p class="check">区分公开事实与个人解释。标出来源、日期和统计范围，删掉未经公开证实的订单、营收及其他重大经营判断。</p><div class="refs"><a href="#finance-law">《中华人民共和国证券法》 · 第 56、80 条</a> <a href="#finance-regulator">国家网信办与中国证监会联合整治通报 · 涉资本市场不实信息案例</a> <a href="#finance-platform">平台《社区自律公约》 · 分则 21</a></div>
+    </li>
+    </ol>
+    <div class="finance-brief" style="margin-top:15px">在正文、字幕、封面和图表中同步删除交易引导和回报承诺。带上声明前，先把稿件改成基于公开信息的产业分析。涉及专业财经内容的账号资质与发布要求，发布前另看站内规定。</div>
+    <div class="finance-sources">
+      <h3>财经出处</h3>
+      <ul class="sources"><li id="finance-law"><a href="https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202111/t20211124_2544351.html" target="_blank" rel="noreferrer">《中华人民共和国证券法》 <span aria-hidden="true">↗</span></a><p>第 52、53、56、80、160 条 · 内幕信息、虚假误导、上市公司重大事项公告、投资咨询许可</p></li>
+<li id="finance-consult"><a href="https://xzfg.moj.gov.cn/front/law/detail?LawID=500" target="_blank" rel="noreferrer">《证券、期货投资咨询管理暂行办法》 <span aria-hidden="true">↗</span></a><p>第 2、3 条及第 24 条第（二）（三）项 · 有偿投资分析、预测或建议的许可要求，以及咨询机构及其人员的收益承诺限制</p></li>
+<li id="finance-regulator"><a href="https://www.csrc.gov.cn/csrc/c100028/c7603320/content.shtml" target="_blank" rel="noreferrer">国家网信办与中国证监会联合整治通报 <span aria-hidden="true">↗</span></a><p>“诱导网民跟风买入股票”相关案例 · 收益截图、预测个股走势、渲染稳赚与传炒不实涉企信息的整治案例</p></li>
+<li id="finance-platform"><a href="https://sf3-cdn-tos.douyinstatic.com/obj/ies-hotsoon-draft/douyin_agreement/b94d5a1e-c676-4e99-92b5-2d5e26d2568b.html?enter_from=user_agreement" target="_blank" rel="noreferrer">平台《社区自律公约》 <span aria-hidden="true">↗</span></a><p>分则 21、33、35（1）、36（2） · 不实消息、金融专业服务资质、误导性营销及保障类收益诱导</p></li></ul>
+      <p>官方原文核验日期 2026-11-21。</p>
+      <p>财经行业专项公约的完整官方原文与条款编号待核实。现列已核对的社区公约和监管原文。</p>
+    </div>
+  </section>
+</main>
+<footer><div class="shell">以官方最新规定为准，重要文案上线前请法务确认。</div></footer>
+</body>
+</html>

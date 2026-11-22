@@ -1,0 +1,27 @@
+.hero { background: #0b1018; }
+
+.hero-image { inset: 0; background: #111923; }
+.hero-image img { object-position: 73% 18%; }
+.hero-image::after { background: linear-gradient(0deg, #0b1018, #0b101825 22%, transparent 46%); }
+.hero-wash { background: linear-gradient(90deg, #080d15c9, #080d1552 42%, transparent 64%); }
+
+.hero h1 { font-size: clamp(42px, 4.65vw, 77px); }
+.hero .hero-deck { color: #e2e7ef; }
+.hero .hero-offer { color: #d1d9e5; }
+.hero .hero-brief { background: #0d1926b8; border-color: #ac9a7961; color: #e0e8f2; }
+
+.entry-cold #opening-film, .entry-cold .film-poster img { object-position: 73% center; }
+
+@media (max-width: 760px) and (orientation: portrait) {
+  .entry-cold #opening-film, .entry-cold .film-poster img { object-position: 88% center; }
+}
+
+@media (max-width: 760px) {
+  .hero-image { bottom: auto; height: clamp(285px, 53svh, 465px); }
+  .hero-image img { object-position: 88% 10%; }
+  .hero-image::after { background: linear-gradient(0deg, #0b1018, #0b101866 23%, transparent 47%); }
+  .hero-wash { background: none; }
+  .hero-grid { align-items: end; }
+  .hero-copy { padding-top: clamp(300px, 48svh, 430px); padding-bottom: 94px; }
+  .hero h1 { font-size: clamp(29px, 9.4vw, 56px); }
+}

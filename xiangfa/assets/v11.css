@@ -1,0 +1,79 @@
+#position-title { font-size: clamp(32px,3.9vw,66px); }
+#position .position-grid {
+  grid-template-columns: minmax(0,1.69fr) minmax(0,1fr);
+  align-items: start;
+  gap: clamp(14px,2vw,30px);
+}
+.position-audiences {
+  display: grid;
+  grid-template-columns: minmax(0,.81fr) minmax(0,1.19fr);
+  gap: 12px;
+}
+.position-audience {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(14px,1.45vw,21px);
+  border: 1px solid #88684988;
+  border-radius: 16px;
+  background: linear-gradient(140deg,#312119,#1b171b 73%);
+  color: #eae0d4;
+  font-size: 16px;
+  line-height: 1.58;
+}
+.position-audience h3 {
+  margin: 0 0 9px;
+  color: #f2d09a;
+  font-size: clamp(20px,1.85vw,26px);
+  line-height: 1.24;
+}
+.position-audience-business {
+  border-color: #6c839480;
+  background: linear-gradient(145deg,#242630,#19181e 74%);
+}
+.position-audience-business h3 { color: #c9deef; }
+.position-audience dl { margin: 0; }
+.position-audience dl > div {
+  display: grid;
+  grid-template-columns: minmax(4em,.25fr) minmax(0,1fr);
+  align-items: baseline;
+  gap: 7px 9px;
+  padding-block: 9px;
+  border-top: 1px solid #b39d833c;
+}
+.position-audience dt { font-weight: 680; color: #f0d8b7; }
+.position-audience-business dt { color: #d0deeb; }
+.position-audience dd { margin: 0; text-wrap: pretty; }
+.position-audience:not(.position-audience-business) dl {
+  display: grid;
+  flex: 1;
+  grid-template-rows: repeat(3, minmax(0,1fr));
+}
+.position-audience:not(.position-audience-business) dl > div {
+  grid-template-columns: minmax(0,1fr);
+  align-content: center;
+  gap: 2px;
+}
+.position-audience-business dl > div { grid-template-columns: minmax(6.1em,.27fr) minmax(0,1fr); }
+.position-topic-note {
+  margin: auto 0 0;
+  padding: 9px 0 0;
+  border-top: 1px solid #b39d833c;
+  color: #c7c3c9;
+  font-size: 12px;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+#position .helix-stage { width: 100%; height: 100%; min-height: 320px; }
+.status-path .next b { text-wrap: pretty; }
+@media (max-width: 1060px) {
+  #position .position-grid { grid-template-columns: minmax(0,1fr); }
+  #position .helix-stage { height: auto; min-height: 0; max-height: 410px; }
+}
+@media (max-width: 760px) {
+  #position-title { font-size: clamp(24px,7.9vw,40px); }
+  .position-audiences { grid-template-columns: minmax(0,1fr); }
+  .position-audience { font-size: 16px; }
+  .position-audience h3 { font-size: 22px; }
+  .position-audience-business dl > div { grid-template-columns: minmax(6em,.29fr) minmax(0,1fr); }
+}

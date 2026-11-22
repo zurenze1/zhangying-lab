@@ -1,0 +1,226 @@
+:root {
+  --interview-gold: #f0cc91;
+  --interview-copy: #d6c9ba;
+  --interview-border: #8a6a4e57;
+  --interview-panel: #191519;
+  --interview-gap: clamp(12px,1.6vw,24px);
+}
+main > .chapter:not(.hero) {
+  min-height: auto;
+  padding-block: clamp(72px,9vw,130px);
+  border-top: 1px solid #d9b38919;
+}
+main > .chapter:not(.hero) h2[id] {
+  max-width: none;
+  margin-bottom: clamp(20px,3vw,44px);
+  font-size: clamp(30px,5vw,68px);
+  line-height: 1.14;
+}
+.hero-brief { align-items: baseline; }
+.hero-brief strong { flex-shrink: 0; }
+.hero-brief span { min-width: 0; }
+.chapter [id] { scroll-margin-top: calc(var(--header) + 14px); }
+
+.diagnosis-grid, .interview-directions, .outcome-grid {
+  display: grid;
+  gap: var(--interview-gap);
+}
+.diagnosis-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.interview-card {
+  border: 1px solid var(--interview-border);
+  border-radius: 13px;
+  background: radial-gradient(ellipse at 100% 0%,#5a3b252c,transparent 80%),var(--interview-panel);
+  min-width: 0;
+}
+.diagnosis-grid .interview-card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  align-items: start;
+  gap: 8px;
+  padding: clamp(13px,2vw,26px);
+}
+.proof-number {
+  color: var(--interview-gold);
+  font-size: clamp(24px,3.15vw,49px);
+  font-weight: 650;
+  line-height: 1.06;
+  letter-spacing: -.045em;
+  font-variant-numeric: tabular-nums;
+}
+.diagnosis-grid h3 { font-size: clamp(17px,1.55vw,23px); margin: 5px 0 0; }
+.diagnosis-grid p,
+.interview-directions p,
+.strategy-list span,
+.shoot-checklist dd,
+.outcome-grid span {
+  color: var(--interview-copy);
+  font-size: clamp(14px,1.25vw,17px);
+  line-height: 1.58;
+}
+.diagnosis-grid p, .interview-directions p { margin: 0; }
+.action-line {
+  border-top: 1px solid var(--interview-border);
+  margin-top: 5px;
+  padding-top: 10px;
+  color: #f4ddb9;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.interview-split {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,.8fr);
+  gap: clamp(16px,4vw,64px);
+  align-items: center;
+}
+.strategy-list, .outcome-grid, .roadmap { list-style: none; margin: 0; padding: 0; }
+.strategy-list li, .shoot-checklist > div { border-top: 1px solid var(--interview-border); }
+.strategy-list li { display: grid; gap: 3px; padding: clamp(10px,1.5vw,22px) 0; }
+.strategy-list strong { font-size: clamp(17px,1.65vw,23px); }
+.interview-illustration {
+  margin: 0;
+  border: 1px solid var(--interview-border);
+  border-radius: 13px;
+  overflow: hidden;
+  background: var(--interview-panel);
+}
+.interview-illustration img { width: 100%; object-fit: cover; display: block; height: auto; }
+.interview-directions, .outcome-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.interview-directions .interview-card { overflow: hidden; }
+.interview-directions .interview-card > div { padding: clamp(13px,1.7vw,24px); }
+.interview-directions img { width: 100%; height: auto; aspect-ratio: 2.15; object-fit: cover; display: block; }
+.interview-directions h3 { margin: 3px 0 6px; font-size: clamp(20px,2.1vw,30px); }
+.interview-directions .direction-goal { font-size: 13px; color: #e6be84; font-weight: 650; }
+.interview-directions .direction-story .direction-goal { color: #b4d2e0; }
+.interview-directions .direction-lab .direction-goal { color: #e2ab9d; }
+.interview-option { display: flex; gap: 5px 15px; flex-wrap: wrap; margin: 18px 0 0; color: var(--interview-copy); }
+.interview-option strong { color: var(--interview-gold); }
+
+#test-shoots .ratio-note { font-size: clamp(14px,1.4vw,18px); }
+#ratios { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; margin: 0 0 14px; }
+#ratios .ratio-counts { display: block; font-size: 13px; line-height: 1.4; }
+#trials .trial-photo { aspect-ratio: 2.1; height: auto; }
+#trials [data-line="skin"] .trial-meta { color: var(--interview-gold); }
+#trials [data-line="story"] .trial-meta { color: #b4d2e0; }
+#trials [data-line="lab"] .trial-meta { color: #e2ab9d; }
+#trial-detail .screenplay-head { display: flex; align-items: start; justify-content: space-between; gap: 8px; }
+#trial-detail h2 { margin: 0; font-size: clamp(21px,3vw,32px); }
+#trial-detail .close-script { white-space: nowrap; }
+#trial-detail .trial-fields { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 12px 16px; }
+#trial-detail .trial-fields dd { margin: 0; }
+
+.shoot-layout { grid-template-columns: minmax(0,.75fr) minmax(0,1fr); }
+.shoot-image { align-self: start; }
+.shoot-image img { aspect-ratio: 1.75; }
+.shoot-image figcaption { padding: 13px 17px; font-size: 15px; color: var(--interview-copy); }
+.shoot-image strong { color: var(--interview-gold); font-size: clamp(20px,2.4vw,35px); }
+.shoot-checklist { margin: 0; }
+.shoot-checklist > div { display: grid; grid-template-columns: max-content minmax(0,1fr); gap: 10px; padding: 8px 0; }
+.shoot-checklist dt { min-width: 4.2em; font-weight: 650; color: var(--interview-gold); }
+.shoot-checklist dd { margin: 0; }
+.outcome-grid li { display: grid; align-content: start; gap: 8px; padding: clamp(14px,2.3vw,33px); }
+.outcome-grid b { color: var(--interview-gold); font-size: clamp(25px,3vw,42px); line-height: 1.15; }
+.threshold-basis { margin: 15px 0 0; }
+
+#review .review-steps { margin-top: 0; }
+#review .review-steps strong { font-size: clamp(16px,1.55vw,22px); }
+#roadmap { background: radial-gradient(ellipse at 65% 15%,#63442b27,transparent 64%); }
+.roadmap { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+.roadmap li { display: grid; grid-template-rows: auto auto auto auto 1fr; min-width: 0; margin: 0; padding-right: clamp(12px,2.1vw,30px); }
+.road-time { color: var(--interview-gold); font-size: clamp(13px,1.2vw,17px); font-weight: 650; }
+.roadmap li > p { margin: 0; }
+.roadmap i {
+  position: relative;
+  display: block;
+  height: 2px;
+  margin: 17px calc(clamp(12px,2.1vw,30px) * -1) 18px 0;
+  background: linear-gradient(90deg,#edc98a,#b79159);
+}
+.roadmap i::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ffe0a8;
+  transform: translateY(-50%);
+  box-shadow: 0 0 12px #edc98a70;
+}
+.roadmap li:last-child i::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #b79159;
+  border-right: 2px solid #b79159;
+  transform: translateY(-50%) rotate(45deg);
+}
+.roadmap h3 { margin: 0 0 5px; font-size: clamp(19px,2.65vw,37px); }
+.roadmap li > p:not(.road-time) { color: var(--interview-copy); font-size: clamp(14px,1.35vw,18px); line-height: 1.55; }
+.roadmap li > div {
+  align-self: start;
+  margin-top: 11px;
+  border-top: 1px solid var(--interview-border);
+  padding-top: 8px;
+  color: #e9cda4;
+  font-size: clamp(13px,1.1vw,16px);
+  line-height: 1.45;
+}
+.road-later { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 22px 0 0; color: var(--interview-copy); font-size: 14px; }
+.road-later strong { color: var(--interview-gold); }
+#appendix .topic-chart { margin-bottom: 18px; }
+#appendix .appendix-inner { padding-top: 2px; }
+
+@media (max-width: 960px) {
+  .diagnosis-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 760px) {
+  main > .chapter:not(.hero) { padding-block: 53px; }
+  main > .chapter:not(.hero) h2[id] { font-size: clamp(26px,7.4vw,47px); margin-bottom: 22px; }
+  .hero-brief { white-space: normal; font-size: 11px; padding: 7px 8px; }
+  .hero-brief span { text-wrap: pretty; }
+  .diagnosis-grid .interview-card { gap: 5px; }
+  .diagnosis-grid h3 { margin-top: 2px; }
+  .diagnosis-grid p { font-size: 13px; }
+  .action-line { font-size: 13px; }
+  .interview-split { grid-template-columns: minmax(0,1fr); }
+  .interview-illustration img { max-height: 220px; }
+  .interview-directions { grid-template-columns: minmax(0,1fr); }
+  .interview-directions .interview-card { display: grid; grid-template-columns: minmax(0,.7fr) minmax(0,1fr); }
+  .interview-directions img { aspect-ratio: auto; height: 100%; min-height: 108px; }
+  .interview-directions p { font-size: 14px; }
+  #ratios { gap: 5px; }
+  #ratios .ratio-button { padding: 8px; }
+  #ratios .ratio-counts { font-size: 11px; }
+  #trials .trial-photo { aspect-ratio: auto; height: 100%; min-height: 88px; }
+  .outcome-grid { grid-template-columns: minmax(0,1fr); gap: 8px; }
+  .outcome-grid li { grid-template-columns: minmax(0,106px) minmax(0,1fr); align-items: center; }
+  .outcome-grid b { font-size: 21px; }
+  .roadmap li { padding-right: 8px; }
+  .roadmap h3 { font-size: clamp(16px,4.35vw,22px); }
+  .roadmap i { margin-right: -8px; }
+  .roadmap li > p:not(.road-time), .roadmap li > div, .road-later { font-size: 13px; }
+  .road-later { margin-top: 16px; }
+}
+
+#status .interview-card {
+  color: #251d18;
+  background: linear-gradient(150deg,#fcf9f3,#f1e9dd);
+  border-color: #95704d51;
+}
+#status .proof-number { color: #75471e; }
+#status .interview-card p { color: #51443b; }
+#status .action-line { color: #633c1d; }
+.interview-directions .direction-story img { object-position: 59% 33%; }
+@media (max-width: 760px) {
+  #review .review-steps { grid-template-columns: minmax(0,1fr); }
+  #review .review-steps li { flex-direction: row; align-items: center; }
+  #review .review-steps li + li { border-inline-start: 0; border-top: 1px solid #81624483; }
+  #review .review-steps li::after { display: none; }
+}
+
+.roadmap li > p:not(.road-time), .roadmap li > div { text-wrap: pretty; }
