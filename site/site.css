@@ -43,7 +43,7 @@ section[id]{scroll-margin-top:var(--header)}
 .hero-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#020202 0%,transparent 18%)}
 .hero-copy{width:calc(100% - 2 * var(--hero-gutter));max-width:none;padding-block:clamp(26px,2.5vw,45px) 90px}
 .hero-temperature{
-  display:inline-flex;align-items:flex-start;font-size:clamp(200px,32.3vw,540px);font-weight:900;
+  display:inline-flex;align-items:flex-start;font-size:clamp(96px,11.5vw,190px);font-weight:900;
   line-height:.94;background:linear-gradient(180deg,#ffe7ad 7%,#ffd58d 33%,#fcb365 64%,#e47e31 96%);
   background-clip:text;color:transparent;
 }
@@ -179,7 +179,7 @@ dialog::backdrop{background:#030406c9}
   .hero-visual{top:12px}
   .hero-visual::after{background:linear-gradient(0deg,#020202 27%,#020202e0 38%,#02020242 48%,transparent 59%)}
   .hero-copy{padding-block:clamp(340px,109vw,640px) 52px}
-  .hero-temperature{font-size:clamp(120px,38.72vw,218px);letter-spacing:-.04em}
+  .hero-temperature{font-size:clamp(76px,22vw,112px);letter-spacing:-.04em}
   .hero-temperature span+span{margin-left:.13em}
   .hero h1{font-size:clamp(27px,8.72vw,43px);letter-spacing:-.047em;margin:18px 0 11px}
   .hero-description{max-width:22em;font-size:14px;line-height:1.66}
